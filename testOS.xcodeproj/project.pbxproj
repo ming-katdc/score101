@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A7C9CDA17A0DA5D006B7166 /* Copyofme2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A7C9CD917A0DA5D006B7166 /* Copyofme2.txt */; };
+		3A7C9CDF17A0F76A006B7166 /* Copyofme2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A7C9CDE17A0F76A006B7166 /* Copyofme2.txt */; };
+		3A7C9CE017A0F76A006B7166 /* Copyofme2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A7C9CDE17A0F76A006B7166 /* Copyofme2.txt */; };
 		3ABE9C7B17A0C92300B51B49 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ABE9C7A17A0C92300B51B49 /* Cocoa.framework */; };
 		3ABE9C8517A0C92300B51B49 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3ABE9C8317A0C92300B51B49 /* InfoPlist.strings */; };
 		3ABE9C8717A0C92300B51B49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE9C8617A0C92300B51B49 /* main.m */; };
@@ -32,7 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3A7C9CD917A0DA5D006B7166 /* Copyofme2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Copyofme2.txt; sourceTree = "<group>"; };
+		3A7C9CDE17A0F76A006B7166 /* Copyofme2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Copyofme2.txt; sourceTree = "<group>"; };
 		3ABE9C7717A0C92300B51B49 /* testOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ABE9C7A17A0C92300B51B49 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		3ABE9C7D17A0C92300B51B49 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -152,7 +153,7 @@
 		3ABE9CA117A0C92400B51B49 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3A7C9CD917A0DA5D006B7166 /* Copyofme2.txt */,
+				3A7C9CDE17A0F76A006B7166 /* Copyofme2.txt */,
 				3ABE9CA217A0C92400B51B49 /* testOSTests-Info.plist */,
 				3ABE9CA317A0C92400B51B49 /* InfoPlist.strings */,
 			);
@@ -233,7 +234,7 @@
 				3ABE9C8517A0C92300B51B49 /* InfoPlist.strings in Resources */,
 				3ABE9C8B17A0C92300B51B49 /* Credits.rtf in Resources */,
 				3ABE9C9117A0C92400B51B49 /* MainMenu.xib in Resources */,
-				3A7C9CDA17A0DA5D006B7166 /* Copyofme2.txt in Resources */,
+				3A7C9CDF17A0F76A006B7166 /* Copyofme2.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3ABE9CA517A0C92400B51B49 /* InfoPlist.strings in Resources */,
+				3A7C9CE017A0F76A006B7166 /* Copyofme2.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -39,13 +39,54 @@
 
         
         NSMutableDictionary *item = [NSMutableDictionary new];
-        
+        NSString *tmp = @"";
+        int stage = 0;
+        int counter = 0;
         for (int j = 0; j < [data2 count]; j++) {
-            
-            [item setObject:data2[j] forKey:[NSString stringWithFormat:@"%d", j]];
+            NSMutableArray *data3;
+            tmp = data2[j];
+//            NSLog (@"%@", tmp);
+            if ([tmp isEqualToString:@""]) {
+                break;
+            }
+            if (stage == 0) {
+            switch(j) {
+                case 0:
+                    [item setObject:data2[j] forKey:@"校系代碼"];
+                    break;
+                case 1:
+                    [item setObject:data2[j] forKey:@"校名"];
+                    break;
+                case 2:
+                    [item setObject:data2[j] forKey:@"系組名"];
+                    break;
+                default:
+                    data3 = [[data2[j]componentsSeparatedByCharactersInSet: [NSCharacterSet characterSetWithCharactersInString: @"x"]] mutableCopy];
+                    if ([data3 count] == 2) {
+                        [item setObject:data3[1] forKey:data3[0]];
+                    } else {
+                        if (stage == 0) {
+                            stage = 1;
+                        }
+                        [item setObject:data2[j] forKey:@"錄取名額(含外加)"];
+                        counter ++;
+//                        if ([data2[j] isEqualToString:@"-----"] || [data2[j] isEqualToString:@"****"]) {
+//                            // do nothing.
+//                        } else {
+//                            [item setObject:data2[j] forKey:[NSString stringWithFormat:@"%d", j]];
+//                        }
+                    }
+            }
+            } else if (stage == 1) {
+                NSArray *title =  [NSArray arrayWithObjects: @"", @"普通生錄取分數", @"普通生同分參酌", @"原住民錄取分數", @"退伍軍人錄取分數", @"僑生錄取分數", nil];
+                [item setObject:data2[j] forKey:title[counter]];
+                counter ++;
+            }
             
         }
-        [array addObject:item];
+        if (![tmp isEqualToString:@""]) {
+            [array addObject:item];
+        }
     }
     [array writeToFile:pathToPlist atomically:YES];
     NSLog (@"%@", pathToPlist);
